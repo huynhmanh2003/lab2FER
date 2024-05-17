@@ -1,14 +1,49 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./Ex1";
-import App1 from "./Ex2";
+import Navbar from "./Navbar";
+import Carousel from "./Carousel"; 
+import MenuCard from "./MenuCard"; 
+import FeedbackForm from "./FeedbackForm";
 import reportWebVitals from "./reportWebVitals";
-
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App1 />
+        <Navbar/>
+        <Carousel/>
+        <div className="container pt-5">
+      <h2 className="text-light mb-5">Our Menu</h2>
+      <div className="row d-flex justify-content-between">
+        <MenuCard
+          title="Margherita Pizza"
+          image="/Images/menu1.jpg"
+          oldPrice={'$123555'}
+          newPrice={'$321456'}
+        />
+        <MenuCard
+          title="Mushroom Pizza"
+          image="/Images/menu2.jpg"
+          oldPrice={'$123555'}
+          newPrice={'$321666'}
+        />
+        <MenuCard
+          title="Pepperoni Pizza"
+          image="/Images/menu3.jpg"
+          oldPrice={'$123'}
+          newPrice={'$321'}
+        />
+        <MenuCard
+          title="Vegetarian Pizza"
+          image="/Images/menu4.jpg"
+          oldPrice={'$123'}
+          newPrice={'$321'}
+        />
+      </div>
+    </div>
+
+        <FeedbackForm/>
   </React.StrictMode>
 );
 
